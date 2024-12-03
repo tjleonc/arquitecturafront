@@ -1,0 +1,12 @@
+{% extends 'gastos/base.html' %}
+{% block content %}
+<h2>Generar Gastos</h2>
+<form id="generateForm">
+    <label for="month">Mes:</label>
+    <input type="number" id="month" name="month" required>
+    <label for="year">Año:</label>
+    <input type="number" id="year" name="year" required>
+    <button type="submit">Generar Gastos</button>
+</form>
+<pre id="generateResult"></pre>
+{% endblock %}

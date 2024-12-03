@@ -1,0 +1,11 @@
+{% extends 'gastos/base.html' %}
+
+{% block content %}
+<h2>Bienvenido a Gestión de Gastos</h2>
+<p>Utiliza las siguientes opciones para interactuar con el sistema:</p>
+<ul>
+    <li><a href="{% url 'generar_gastos_html' %}">Generar Gastos</a></li>
+    <li><a href="{% url 'marcar_pagado_html' %}">Registrar Pagos</a></li>
+    <li><a href="{% url 'listar_pendientes_html' %}">Consultar Pendientes</a></li>
+</ul>
+{% endblock %}

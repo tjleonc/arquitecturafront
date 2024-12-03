@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Gastos</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Gastos Comunes</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'generar_gastos_html' %}">Generar Gastos</a></li>
+                <li><a href="{% url 'marcar_pagado_html' %}">Registrar Pago</a></li>
+                <li><a href="{% url 'listar_pendientes_html' %}">Consultar Pendientes</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <script src="{%static 'js/script.js'%}"></script>
+</body>
+</html>
